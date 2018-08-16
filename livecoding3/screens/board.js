@@ -6,9 +6,35 @@ export default class Boards extends Component {
   constructor(props){
     super(props)
     this.state = {
+      satu:1,
+      dua:2,
+      tiga:3,
+      empat:4,
+      lima:5,
+      enam:6,
+      tujuh:7,
+      delapan:8,
+      sembilan:9,
+      sepuluh:10,
+      sebelas:11,
+      duabelas:12,
+      tigabelas:13,
+      empatbelas:14,
+      limabelas:15,
+      enambelas:16,
+      tujuhbelas:17,
+      delapanbelas:18,
+      sembilanbelas:19,
+      duapuluh:20,
+      duasatu:21,
+      duadua:22,
+      duatiga:23,
+      duaempat:24,
+      dualima:25,
       counts:[],
       player1:0
     }
+
   }
 
   componentDidMount() {
@@ -25,6 +51,7 @@ export default class Boards extends Component {
 
     console.log(this.state.player1)
 
+
     if(this.state.player1 >= 25){
       this.setState({
         player1: 25
@@ -35,6 +62,8 @@ export default class Boards extends Component {
       player1: Number(this.state.player1 + Math.floor(Math.random() * 6 + 1))
     })
       }
+      //
+      // if(this.state.player1 ==)
     }
 
 
@@ -46,44 +75,43 @@ export default class Boards extends Component {
         <Text style={styles.scores}>Position: {this.state.player1}</Text>
         <View style={{flex: 1, flexDirection: 'row',padding:10,
         justifyContent: 'space-between',marginBottom:60}}>
-          <View style={{width: 70, height: 70, backgroundColor: 'black'}}><Text onPress={() => {
-             alert({data})}}  style={styles.item}>21</Text></View>
-          <View style={{width: 70, height: 70, backgroundColor: 'skyblue'}}><Text style={styles.item}>22</Text></View>
-          <View style={{width: 70, height: 70, backgroundColor: 'steelblue'}}><Text style={styles.item}>23</Text></View>
-            <View style={{width: 70, height: 70, backgroundColor: 'skyblue'}}><Text style={styles.item}>24</Text></View>
-            <View style={{width: 70, height: 70, backgroundColor: 'steelblue'}}><Text style={styles.item}>25</Text></View>
+          <View style={{width: 70, height: 70, backgroundColor: 'black'}}><Text style={styles.item}>{this.state.dualima}</Text></View>
+           <View style={{width: 70, height: 70, backgroundColor: 'skyblue'}}><Text style={styles.item}>{this.state.duaempat}</Text></View>
+          <View style={{width: 70, height: 70, backgroundColor: 'steelblue'}}><Text style={styles.item}>{this.state.duatiga}</Text></View>
+            <View style={{width: 70, height: 70, backgroundColor: 'skyblue'}}><Text style={styles.item}>{this.state.duadua}</Text></View>
+            <View style={{width: 70, height: 70, backgroundColor: 'steelblue'}}><Text style={styles.item}>{this.state.duasatu}</Text></View>
         </View>
         <View style={{flex: 1, flexDirection: 'row',padding:10,
         justifyContent: 'space-between',marginBottom:60}}>
-          <View style={{width: 70, height: 70, backgroundColor: 'powderblue'}}><Text style={styles.item}>20</Text></View>
-          <View style={{width: 70, height: 70, backgroundColor: 'skyblue'}}><Text style={styles.item}>19</Text></View>
-          <View style={{width: 70, height: 70, backgroundColor: 'steelblue'}}><Text style={styles.item}>18</Text></View>
-            <View style={{width: 70, height: 70, backgroundColor: 'skyblue'}}><Text style={styles.item}>17</Text></View>
-            <View style={{width: 70, height: 70, backgroundColor: 'steelblue'}}><Text style={styles.item}>16</Text></View>
+          <View style={{width: 70, height: 70, backgroundColor: 'powderblue'}}><Text style={styles.item}>{this.state.duapuluh}</Text></View>
+          <View style={{width: 70, height: 70, backgroundColor: 'skyblue'}}><Text style={styles.item}>{this.state.sembilanbelas}</Text></View>
+          <View style={{width: 70, height: 70, backgroundColor: 'steelblue'}}><Text style={styles.item}>{this.state.delapanbelas}</Text></View>
+            <View style={{width: 70, height: 70, backgroundColor: 'skyblue'}}><Text style={styles.item}>{this.state.tujuhbelas}</Text></View>
+            <View style={{width: 70, height: 70, backgroundColor: 'steelblue'}}><Text style={styles.item}>{this.state.enambelas}</Text></View>
         </View>
         <View style={{flex: 1, flexDirection: 'row',padding:10,
         justifyContent: 'space-between',marginBottom:60}}>
-          <View style={{width: 70, height: 70, backgroundColor: 'powderblue'}}><Text style={styles.item}>11</Text></View>
-          <View style={{width: 70, height: 70, backgroundColor: 'skyblue'}}><Text style={styles.item}>12</Text></View>
-          <View style={{width: 70, height: 70, backgroundColor: 'steelblue'}}><Text style={styles.item}>13</Text></View>
-            <View style={{width: 70, height: 70, backgroundColor: 'skyblue'}}><Text style={styles.item}>14</Text></View>
-            <View style={{width: 70, height: 70, backgroundColor: 'steelblue'}}><Text style={styles.item}>15</Text></View>
+          <View style={{width: 70, height: 70, backgroundColor: 'powderblue'}}><Text style={styles.item}>{this.state.sebelas}</Text></View>
+          <View style={{width: 70, height: 70, backgroundColor: 'skyblue'}}><Text style={styles.item}>{this.state.duabelas}</Text></View>
+          <View style={{width: 70, height: 70, backgroundColor: 'steelblue'}}><Text style={styles.item}>{this.state.tigabelas}</Text></View>
+            <View style={{width: 70, height: 70, backgroundColor: 'skyblue'}}><Text style={styles.item}>{this.state.empatbelas}</Text></View>
+            <View style={{width: 70, height: 70, backgroundColor: 'steelblue'}}><Text style={styles.item}>{this.state.limabelas}</Text></View>
         </View>
         <View style={{flex: 1, flexDirection: 'row',padding:10,
         justifyContent: 'space-between',marginBottom:60}}>
-          <View style={{width: 70, height: 70, backgroundColor: 'powderblue'}}><Text style={styles.item}>10</Text></View>
-          <View style={{width: 70, height: 70, backgroundColor: 'skyblue'}}><Text style={styles.item}>9</Text></View>
-          <View style={{width: 70, height: 70, backgroundColor: 'steelblue'}}><Text style={styles.item}>8</Text></View>
-            <View style={{width: 70, height: 70, backgroundColor: 'skyblue'}}><Text style={styles.item}>7</Text></View>
-            <View style={{width: 70, height: 70, backgroundColor: 'steelblue'}}><Text style={styles.item}>6</Text></View>
+          <View style={{width: 70, height: 70, backgroundColor: 'powderblue'}}><Text style={styles.item}>{this.state.sepuluh}</Text></View>
+          <View style={{width: 70, height: 70, backgroundColor: 'skyblue'}}><Text style={styles.item}>{this.state.sembilan}</Text></View>
+          <View style={{width: 70, height: 70, backgroundColor: 'steelblue'}}><Text style={styles.item}>{this.state.delapan}</Text></View>
+            <View style={{width: 70, height: 70, backgroundColor: 'skyblue'}}><Text style={styles.item}>{this.state.tujuh}</Text></View>
+            <View style={{width: 70, height: 70, backgroundColor: 'steelblue'}}><Text style={styles.item}>{this.state.enam}</Text></View>
         </View>
         <View style={{flex: 1, flexDirection: 'row',padding:10,
         justifyContent: 'space-between',marginBottom:60}}>
-          <View style={{width: 70, height: 70, backgroundColor: 'red'}}><Text style={styles.item}>1</Text></View>
-          <View style={{width: 70, height: 70, backgroundColor: 'skyblue'}}><Text style={styles.item}>2</Text></View>
-          <View style={{width: 70, height: 70, backgroundColor: 'steelblue'}}><Text style={styles.item}>3</Text></View>
-            <View style={{width: 70, height: 70, backgroundColor: 'skyblue'}}><Text style={styles.item}>4</Text></View>
-            <View style={{width: 70, height: 70, backgroundColor: 'steelblue'}}><Text style={styles.item}>5</Text></View>
+          <View style={{width: 70, height: 70, backgroundColor: 'red'}}><Text style={styles.item}>{this.state.satu}</Text></View>
+          <View style={{width: 70, height: 70, backgroundColor: 'skyblue'}}><Text style={styles.item}>{this.state.dua}</Text></View>
+          <View style={{width: 70, height: 70, backgroundColor: 'steelblue'}}><Text style={styles.item}>{this.state.tiga}</Text></View>
+            <View style={{width: 70, height: 70, backgroundColor: 'skyblue'}}><Text style={styles.item}>{this.state.empat}</Text></View>
+            <View style={{width: 70, height: 70, backgroundColor: 'steelblue'}}><Text style={styles.item}>{this.state.lima}</Text></View>
         </View>
 
         <TouchableOpacity

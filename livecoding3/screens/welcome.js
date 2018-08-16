@@ -4,6 +4,9 @@ import { AppRegistry, View, FlatList, TouchableOpacity,StyleSheet, Text, Button 
 export default class Welcome extends Component {
   constructor(props){
     super(props)
+    this.state = {
+     
+    }
   }
 
   playing(){
