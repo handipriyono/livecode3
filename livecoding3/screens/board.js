@@ -38,6 +38,7 @@ export default class Boards extends Component {
   }
 
   componentDidMount() {
+    console.log(this.state,'kjlklkjk')
     let datas = []
     for(let i=1; i <= 25; i++){
       datas.push(i)
@@ -49,20 +50,31 @@ export default class Boards extends Component {
 
   plays(){
 
-    console.log(this.state.player1)
-
-
+console.log(this.state,'ini state')
     if(this.state.player1 >= 25){
       this.setState({
         player1: 25
       })
       alert('YOU WIN')
     } else {
+
     this.setState({
-      player1: Number(this.state.player1 + Math.floor(Math.random() * 6 + 1))
+      player1: this.state.player1 +   Math.floor(Math.random() * 6 + 1)
     })
+
+    for(let key in this.state){
+      if(this.state.player1 === this.state[key] && key !== 'player1') {
+        console.log('trueee')
+        this.setState({
+          [key]: 'XXXXXX'
+        })
       }
-      //
+    }
+      }
+
+
+
+
       // if(this.state.player1 ==)
     }
 
