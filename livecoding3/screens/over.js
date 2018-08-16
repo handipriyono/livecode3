@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { AppRegistry, View, FlatList, TouchableOpacity,StyleSheet, Text, Button } from 'react-native';
+import { AppRegistry, View, FlatList,   TouchableOpacity,StyleSheet, Text, Button } from 'react-native';
 
 export default class Welcome extends Component {
   constructor(props){
@@ -7,20 +7,18 @@ export default class Welcome extends Component {
   }
 
   playing(){
-    console.log(this.props.navigation.navigate('Board'),'klk')
-    this.props.navigation.navigate('Mains')
+    this.props.navigation.navigate('Home')
   }
 
   render() {
     return (
       <View style={styles.container}>
-       <Text>WELCOME TO GAME</Text>
+       <Text>Game Over</Text>
          <TouchableOpacity
           style={styles.button}
           onPress={this.playing.bind(this)} >
-          <Text>PLAY </Text>
+          <Text>PLAY Again</Text>
         </TouchableOpacity>
-
        </View>
     );
   }
@@ -36,8 +34,7 @@ const styles = StyleSheet.create({
   button: {
    alignItems: 'center',
    backgroundColor: '#DDDDDD',
-   padding: 10,
-   borderColor:'black'
+   padding: 10
  },
   item: {
     padding: 10,
